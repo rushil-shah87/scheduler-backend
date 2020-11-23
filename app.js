@@ -99,17 +99,17 @@ db.initialize(dbName2, collectionName2, function(dbCollection) { // successCallb
 // ex: $ curl -X POST -H "Content-Type: application/json" --data '{"id": "tt0109830", "name": "Forrest
 // Gump", "genre": "drama"}' http://localhost:9000/items
 
-app.post("/users", (request, response) => {
-    const item = request.body;
-    userCollection.insertOne(item, (error, result) => { // callback of insertOne
-        if (error) throw error;
-        // return updated list
-        userCollection.find().toArray((_error, _result) => { // callback of find
-            if (_error) throw _error;
-            response.json(_result);
-        });
-    });
-});
+// app.post("/users", (request, response) => {
+//     const item = request.body;
+//     userCollection.insertOne(item, (error, result) => { // callback of insertOne
+//         if (error) throw error;
+//         // return updated list
+//         userCollection.find().toArray((_error, _result) => { // callback of find
+//             if (_error) throw _error;
+//             response.json(_result);
+//         });
+//     });
+// });
 
 // update collection document
 // ex: curl -X PUT -H "Content-Type: application/json" --data '{"qty": 200}' http://localhost:9000/items/canvas2

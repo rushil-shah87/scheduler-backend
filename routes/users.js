@@ -74,6 +74,7 @@ router.post("/login", async (req, res) => {
                 semRem: user.semRem
             },
         });
+        console.log("made it through login");
     } catch (err) {
         res.status(500).json(err);
 
