@@ -1,0 +1,39 @@
+Course-Planner API:
+
+Course Data Access: 
+
+ - Get a list of all courses:
+	> url: http://localhost:9000/courses
+	> type: GET
+	> Returns: JSON Array of all courses
+ - Get course by course code
+	> url: http://localhost:9000/courses/{courseCode}
+	> type: GET
+	> Returns: JSON Object of requested course
+	
+User API:
+
+ - Add a user: 
+	> url:http://localhost:9000/users
+	> type: POST
+	> CURL ex.: curl -X POST -H "Content-Type: application/json" --data 
+	'{"name": "Mac Carlton", "username": "maccarlton", "password": "mac123", "courses_taken": ["110", "410", "411", "426"]}'  http://localhost:9000/users
+	> Returns: updated list of all users
+ - Update a users courses taken:
+	> url: http://localhost:9000/users
+	> type PUT
+	> CURL ex.: curl -X PUT -H "Content-Type: application/json" --data
+	'{"courses_taken": {updatedArray}]' http://localhost:9000/users
+	> Returns a updated JSON array of all users 
+ - Get a list of all users:
+	> url:http://localhost:9000/users
+	> type GET
+	> Returns: JSON Array of all users
+ - Get a specific user:
+	> url:http://localhost:9000/users/{username}
+	> type GET
+	> Returns: JSON Object of user
+ - Delete a user:
+	> url:http://localhost:9000/users/{username}
+	> type DELETE
+	> Returns: Updated array of users
